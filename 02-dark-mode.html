@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dark Mode</title>
+    <style>
+
+        html {font-size: 100%;} /*16px*/
+
+        body {
+            font-weight: 400;
+            line-height: 1.75;
+            color: #3f0d7d;
+        }
+
+        p {margin-bottom: 1rem;}
+
+        :root {
+            --background: #fff;
+            --text-color: #0f1031;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --background: #0f1031;
+                --text-color: #fff;
+            }
+        }
+
+        body, html {
+            height: 100%;
+            color: var(--text-color);
+            background: var(--background);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Dark mode demo</h1>
+        </header>
+        <main>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat odio repellendus neque illum explicabo architecto minima eligendi expedita, distinctio aperiam eos voluptates dolorum inventore nostrum dolorem necessitatibus voluptate, iusto nisi.
+            </p>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat odio repellendus neque illum explicabo architecto minima eligendi expedita, distinctio aperiam eos voluptates dolorum inventore nostrum dolorem necessitatibus voluptate, iusto nisi.
+            </p>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat odio repellendus neque illum explicabo architecto minima eligendi expedita, distinctio aperiam eos voluptates dolorum inventore nostrum dolorem necessitatibus voluptate, iusto nisi.
+            </p>
+        </main>
+       
+    </div>
+   
+</body>
+</html>

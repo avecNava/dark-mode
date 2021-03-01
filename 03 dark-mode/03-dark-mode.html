@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dark Mode</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Dark mode demo</h1>
+        </header>
+        <main>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat odio repellendus neque illum explicabo architecto minima eligendi expedita, distinctio aperiam eos voluptates dolorum inventore nostrum dolorem necessitatibus voluptate, iusto nisi.
+            </p>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat odio repellendus neque illum explicabo architecto minima eligendi expedita, distinctio aperiam eos voluptates dolorum inventore nostrum dolorem necessitatibus voluptate, iusto nisi.
+            </p>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat odio repellendus neque illum explicabo architecto minima eligendi expedita, distinctio aperiam eos voluptates dolorum inventore nostrum dolorem necessitatibus voluptate, iusto nisi.
+            </p>
+        </main>
+       
+    </div>
+        
+<script>
+  // If `prefers-color-scheme` is not supported, fall back to light mode.
+  if (window.matchMedia('(prefers-color-scheme: dark)').media === 'not all') {
+    document.documentElement.style.display = 'none';
+    document.head.insertAdjacentHTML(
+        'beforeend',
+        '<link rel="stylesheet" href="light.css" onload="document.documentElement.style.display = \'\'">'
+    );
+  }
+</script>
+
+<link rel="stylesheet" href="dark.css" media="(prefers-color-scheme: dark)">
+<link rel="stylesheet" href="light.css" media="(prefers-color-scheme: light)">
+<!-- The main stylesheet -->
+<link rel="stylesheet" href="style.css">
+       
+</body>
+</html>

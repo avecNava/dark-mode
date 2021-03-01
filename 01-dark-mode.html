@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dark Mode</title>
+    <style>
+
+        html {font-size: 100%;} /*16px*/
+
+        body {
+            font-weight: 400;
+            line-height: 1.75;
+            color: #3f0d7d;
+        }
+
+        p {margin-bottom: 1rem;}
+
+      
+        .site_name {
+            font-size: 2rem;
+        }
+
+        .dark_mode_icon {
+            background: url(dark-switch.png);
+            background-repeat: no-repeat;
+            height: 30px;
+            background-size: cover;
+            width: 60px;
+            height: 30px;
+        }
+        .light_switch {
+            background-position-y: 0;
+        }
+        .dark_switch {
+            background-position-y: -28px;
+            border: 2px solid white;
+            border-radius: 50px;
+        }
+        .header_wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .dark-mode {
+            background: #3e3939;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header_wrapper">
+                <div class="site_name">
+                    Dark mode demo
+                </div>
+                <div class="dark_mode_icon light_switch" onclick="switch_mode()">
+
+                </div>
+            </div>
+        </header>
+        <main>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat odio repellendus neque illum explicabo architecto minima eligendi expedita, distinctio aperiam eos voluptates dolorum inventore nostrum dolorem necessitatibus voluptate, iusto nisi.
+            </p>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat odio repellendus neque illum explicabo architecto minima eligendi expedita, distinctio aperiam eos voluptates dolorum inventore nostrum dolorem necessitatibus voluptate, iusto nisi.
+            </p>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat odio repellendus neque illum explicabo architecto minima eligendi expedita, distinctio aperiam eos voluptates dolorum inventore nostrum dolorem necessitatibus voluptate, iusto nisi.
+            </p>
+        </main>
+       
+    </div>
+    <script>
+        
+        document.body.classList.toggle('dark-mode', localStorage.getItem('darkmode') === 'true');
+
+        function switch_mode(){
+
+            const dark = localStorage.getItem('darkmode') === 'true';
+            localStorage.setItem('darkmode', !dark);
+            const element = document.body;
+            element.classList.toggle('dark-mode', !dark);
+
+            //change the switch
+            const mode = document.querySelector('.dark_mode_icon');
+            mode.classList.toggle('dark_switch');
+
+        }
+
+    </script>
+</body>
+</html>
